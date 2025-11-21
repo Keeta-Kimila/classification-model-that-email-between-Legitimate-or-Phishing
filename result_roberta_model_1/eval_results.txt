@@ -1,0 +1,10 @@
+accuracy = 1.0
+auprc = 1.0
+auroc = 1.0
+eval_loss = 0.004537811502814293
+f1_score = 1.0
+fn = 0
+fp = 0
+mcc = 1.0
+tn = 50
+tp = 50
