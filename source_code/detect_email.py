@@ -58,7 +58,7 @@ def build_features(subject: str, body: str):
 # 2. Load models dynamically
 # ----------------------------------------------
 @st.cache_resource
-def load_model(model_name):
+def load_model_email(model_name):
 
     if model_name == "lightgbm_model_new.pkl":
         model = joblib.load(model_name)
@@ -120,7 +120,7 @@ if submitted:
 
     st.info("🔄 Loading model...")
 
-    model, model_type = load_model(model_choice)
+    model, model_type = load_model_emai(model_choice)
 
     st.info("🔄 Making prediction...")
     probability = predict_probability(model, model_type, features)
@@ -133,3 +133,4 @@ if submitted:
 
     with st.expander("🔍 Feature Vector Preview"):
         st.write(features)
+
