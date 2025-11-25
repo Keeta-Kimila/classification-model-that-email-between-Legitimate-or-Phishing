@@ -120,7 +120,7 @@ if submitted:
 
     st.info("🔄 Loading model...")
 
-    model, model_type = load_model_emai(model_choice)
+    model, model_type = load_model_email(model_choice)
 
     st.info("🔄 Making prediction...")
     probability = predict_probability(model, model_type, features)
@@ -133,4 +133,5 @@ if submitted:
 
     with st.expander("🔍 Feature Vector Preview"):
         st.write(features)
+
 
