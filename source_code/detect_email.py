@@ -110,7 +110,7 @@ with st.form("input_form"):
 
     model_choice = st.radio(
         "Select Model",
-        [r"XGBoost (recommendation)", r"LightGBM",r"voting (SVM+XGBoost)"]
+        [r"XGBoost (recommendation)", r"LightGBM", r"voting (SVM+XGBoost)"]
     )
 
     submitted = st.form_submit_button("Predict")
@@ -141,6 +141,7 @@ if submitted:
 
     with st.expander("🔍 Feature Vector Preview"):
         st.write(features)
+
 
 
 
