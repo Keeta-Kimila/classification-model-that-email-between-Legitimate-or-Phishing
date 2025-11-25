@@ -60,11 +60,11 @@ def build_features(subject: str, body: str):
 @st.cache_resource
 def load_model_email(model_name):
 
-    if model_name == "lightgbm_model_new.pkl":
+    if model_name == "lightgbm_model\lightgbm_model_new.pkl":
         model = joblib.load(model_name)
         return model, "lightgbm"
 
-    elif model_name == "xgboost_model_add_new_feature.bin":
+    elif model_name == "xgboost_model\xgboost_model_add_new_feature.bin":
         model = xgb.XGBClassifier()
         model.load_model(model_name)
         return model, "xgboost"
@@ -102,7 +102,7 @@ with st.form("input_form"):
 
     model_choice = st.radio(
         "Select Model",
-        ["lightgbm_model_new.pkl", "xgboost_model_add_new_feature.bin"]
+        ["lightgbm_model\lightgbm_model_new.pkl", "xgboost_model\xgboost_model_add_new_feature.bin"]
     )
 
     submitted = st.form_submit_button("Predict")
@@ -133,5 +133,6 @@ if submitted:
 
     with st.expander("🔍 Feature Vector Preview"):
         st.write(features)
+
 
 
