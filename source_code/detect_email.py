@@ -69,6 +69,10 @@ def load_model_email(model_name):
         model.load_model(r"source_code/xgboost_model_add_new_feature.bin")
         return model, "xgboost"
 
+    elif model_name == "voting (SVM+XGBoost)":
+        model = joblib.load(r"source_code/voting_classifier_model.pkl")
+        return model, "voting"
+
     else:
         raise ValueError("Model does not exist.")
 
@@ -83,6 +87,10 @@ def predict_probability(model, model_type, features):
         return float(proba)
 
     elif model_type == "xgboost":
+        proba = model.predict_proba(features)[0][1]
+        return float(proba)
+
+    elif model_type == "voting":
         proba = model.predict_proba(features)[0][1]
         return float(proba)
 
@@ -102,7 +110,7 @@ with st.form("input_form"):
 
     model_choice = st.radio(
         "Select Model",
-        [r"XGBoost (recommendation)", r"LightGBM"]
+        [r"XGBoost (recommendation)", r"LightGBM",r"voting (SVM+XGBoost)"]
     )
 
     submitted = st.form_submit_button("Predict")
@@ -133,6 +141,7 @@ if submitted:
 
     with st.expander("🔍 Feature Vector Preview"):
         st.write(features)
+
 
 
 
