@@ -11,4 +11,6 @@ List model that used within web app:
 
 Note that: <b>roberta base</b> is the <b>best model</b> in this case but size of <b>model too large</b>, so we can't deploy within web app and put model file in this github.
 # Refer (Paper)
-- https://www.sciencedirect.com/science/article/pii/S0957417425006669?ref=pdf_download&fr=RR-2&rr=9a73cec3597de878
+C. Opara, P. Modesti, and L. Golightly, “Evaluating spam filters and stylometric detection of
+ai-generated phishing emails,” Expert Systems with Applications, vol. 276, p. 127044, 2025.
+[Online]. Available: https://www.sciencedirect.com/science/article/pii/S0957417425006669
