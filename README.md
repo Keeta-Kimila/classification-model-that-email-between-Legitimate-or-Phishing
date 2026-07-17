@@ -11,8 +11,9 @@ List model that used within web app:
 
 Note that: <b>roberta base</b> is the <b>best model</b> in this case but size of <b>model too large</b>, so we can't deploy within web app and put model file in this github.
 # Data Availability
-The pre-trained roberta-base model used in this study is publicly available via the huggingface of FacebookAI at https://huggingface.co/FacebookAI/roberta-base, accessed on Nov 20, 2025.
-
+- https://www.kaggle.com/datasets/guchiopara/ai-generated-emails
+- The pre-trained roberta-base model used in this study is publicly available via the huggingface of FacebookAI at https://huggingface.co/FacebookAI/roberta-base, accessed on Nov 20, 2025.
+The AI-Generated Emails dataset supporting the findings of this study, publicly accessible via the kaggle of Opara at https://www.kaggle.com/datasets/guchiopara/ai-generated-emails, accessed on Nov 14, 2025.
 
 # Refer (Paper)
 C. Opara, P. Modesti, and L. Golightly, “Evaluating spam filters and stylometric detection of
